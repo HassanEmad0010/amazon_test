@@ -1,3 +1,4 @@
+import 'package:amazon_test/modules/FirstDiscount.dart';
 import 'package:amazon_test/shared/componants/componants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +23,7 @@ class HomePage extends StatelessWidget {
                     iconPrefix: Icon(Icons.search),
                     formFieldText: "Search Amazon.eg"),
               ),
-          SizedBox(
+          const SizedBox(
             height: 6,
           ),
 
@@ -89,12 +90,26 @@ class HomePage extends StatelessWidget {
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
+
                   children: [
 
-                    imageScroll(advImage: Icons.star,advColor: Colors.cyan),
+                    imageScroll(advImage: Icons.star,advColor: Colors.cyan,onTapGesture:
+                        (){
+                      print("first discount");
+
+                      Navigator.push(context,
+                        MaterialPageRoute(builder: (BuildContext context){
+                          return FirstDiscount();
+
+
+                        }),
+                      );
+
+                    }),
                     imageScroll(advImage: Icons.circle,advColor: Colors.tealAccent),
                     imageScroll(advImage: Icons.circle,advColor: Colors.teal),
-                    imageScroll(advImage: Icons.circle,advColor: Colors.yellow),
+                    imageScroll(advImage: Icons.circle,advColor: Colors.yellow,
+                    ),
                     imageScroll(advImage: Icons.circle,advColor: Colors.deepPurpleAccent),
 
                   ],

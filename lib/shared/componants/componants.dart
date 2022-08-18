@@ -86,6 +86,7 @@ Widget circleLogoData (
 Widget imageScroll ({
  // required advName,
 //  required advDiscount,
+ Function()? onTapGesture,
   required IconData advImage,
   required Color advColor,
 
@@ -95,7 +96,7 @@ Widget imageScroll ({
 )
 {
   return GestureDetector(
-    onTap: (){},
+    onTap: onTapGesture,
 
 
     child: Container(
