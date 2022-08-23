@@ -57,21 +57,29 @@ Widget textFormField({
 Widget circleLogoData (
 {
  required String logoText,
-  required IconData logoImage,
+   required Image logoImage,
 
 }
 
 )=>
+
  Row(
    children: [
+
+
+
      Column(
 
      children:[
+
+     //code that has potential to throw an exception
+
      CircleAvatar(
-       radius: 50,
-     child: Icon(logoImage),
+       backgroundColor: Colors.white,
+       radius: 40,
+     child:
+     logoImage,
      ),
-       SizedBox(height: 8,),
        Text(logoText,style: TextStyle(fontSize: 15),),
        ]
      ),
@@ -89,9 +97,10 @@ Widget imageScroll ({
  Function()? onTapGesture,
   required IconData advImage,
   required Color advColor,
-
-
-
+  double advWidth=400,
+  double advHeight= 250,
+  bool advmargin = false,
+  double advMarginDouble=2,
 }
 )
 {
@@ -100,9 +109,20 @@ Widget imageScroll ({
 
 
     child: Container(
-      color: advColor,
-      width: 400,
-      height: 250,
+
+      decoration:BoxDecoration(
+        color: advColor,
+        borderRadius: advmargin? BorderRadius.circular(10):null,
+
+
+
+      ) ,
+
+      margin:advmargin? EdgeInsets.all(advMarginDouble) :null  ,
+
+
+      width: advWidth,
+      height: advHeight,
       child:
         Icon(advImage),
 
@@ -113,6 +133,37 @@ Widget imageScroll ({
   );
 
 }
+
+Widget textAmazon (
+{
+  required String textString ,
+  double textSize= 16,
+  FontWeight fontWeight=FontWeight.bold,
+  Color textColor =Colors.black,
+
+}
+    )
+
+{
+  return Container(
+    margin: EdgeInsets.only(left: 20),
+
+    child: Text(
+      textString,
+      style: TextStyle(color:textColor,fontWeight: fontWeight,fontSize: textSize, ),
+      maxLines: 2,
+      textAlign: TextAlign.start,
+      overflow: TextOverflow.ellipsis,
+
+
+
+    ),
+
+  );
+
+}
+
+
 
 
 
