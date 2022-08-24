@@ -21,7 +21,7 @@ Widget textFormField({
       width: double.infinity,
       height: 80,
       child: TextFormField(
-        initialValue: "Search Amazon.eg",
+
 
         decoration: InputDecoration(
           border: const OutlineInputBorder(),

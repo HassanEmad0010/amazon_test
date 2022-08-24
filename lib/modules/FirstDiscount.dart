@@ -8,7 +8,7 @@ class FirstDiscount extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         title: IconButton(
-          icon: Icon(Icons.home, size: 40),
+          icon: const Icon(Icons.home, size: 40),
           onPressed: () {
             Navigator.pop(firstcontext);
           },
@@ -22,8 +22,8 @@ class FirstDiscount extends StatelessWidget {
             width: 200,
             height: 200,
             color: Colors.deepPurple,
-            child: Center(
-              child: const Text("First Screen",style:
+            child: const Center(
+              child: Text("First Screen",style:
               TextStyle(fontSize: 30,color: Colors.white,),),
             ),
 

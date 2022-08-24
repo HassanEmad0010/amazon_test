@@ -33,9 +33,30 @@ class _HomePageState extends State<HomePage> {
         imageData: Image.asset("assets/images/Coupon.PNG"), text: "Coupons"),
     CircularImage(
         imageData: Image.asset("assets/images/elect.PNG"), text: "Electronics"),
+    CircularImage(
+        imageData: Image.asset("assets/images/prime.PNG"), text: "Prime"),
+    CircularImage(
+        imageData: Image.asset("assets/images/Deals.PNG"), text: "Deals"),
+    CircularImage(
+        imageData: Image.asset("assets/images/Coupon.PNG"), text: "Coupons"),
+    CircularImage(
+        imageData: Image.asset("assets/images/elect.PNG"), text: "Electronics"),
+    CircularImage(
+        imageData: Image.asset("assets/images/prime.PNG"), text: "Prime"),
+    CircularImage(
+        imageData: Image.asset("assets/images/Deals.PNG"), text: "Deals"),
+    CircularImage(
+        imageData: Image.asset("assets/images/Coupon.PNG"), text: "Coupons"),
+    CircularImage(
+        imageData: Image.asset("assets/images/elect.PNG"), text: "Electronics"),
   ];
 
   List<TriangleImage> triangleImageList = [
+    TriangleImage(imageData: Image.asset("assets/images/1.PNG")),
+    TriangleImage(imageData: Image.asset("assets/images/2.PNG")),
+    TriangleImage(imageData: Image.asset("assets/images/1.PNG")),
+    TriangleImage(imageData: Image.asset("assets/images/2.PNG")),
+    TriangleImage(imageData: Image.asset("assets/images/1.PNG")),
     TriangleImage(imageData: Image.asset("assets/images/1.PNG")),
     TriangleImage(imageData: Image.asset("assets/images/2.PNG")),
     TriangleImage(imageData: Image.asset("assets/images/1.PNG")),
@@ -49,7 +70,11 @@ List <BigImage> bigImageList=[
   BigImage(imageData: Image.asset("assets/images/12.PNG")),
   BigImage(imageData: Image.asset("assets/images/13.PNG")),
   BigImage(imageData: Image.asset("assets/images/14.PNG")),
-
+  BigImage(imageData: Image.asset("assets/images/11.PNG")),
+  BigImage(imageData: Image.asset("assets/images/10.PNG")),
+  BigImage(imageData: Image.asset("assets/images/12.PNG")),
+  BigImage(imageData: Image.asset("assets/images/13.PNG")),
+  BigImage(imageData: Image.asset("assets/images/14.PNG")),
 
 
 ];
@@ -61,7 +86,7 @@ List <BigImage> bigImageList=[
         centerTitle: true,
         title: Column(
           children: [
-            SizedBox(
+            const SizedBox(
               height: 7,
             ),
             SizedBox(
