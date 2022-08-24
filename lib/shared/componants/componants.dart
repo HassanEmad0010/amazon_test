@@ -1,7 +1,8 @@
-
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:amazon_test/models/Circualer_Image.dart';
+
+import '../../models/Triangle_Image.dart';
 
 Widget textFormField({
   //required TextEditingController textEditingController,
@@ -38,134 +39,82 @@ Widget textFormField({
       ),
     );
 
+Widget circleLogoData({
+  required CircularImage incomingModel,
+}) =>
+    Row(
+      children: [
+        Column(children: [
+          //code that has potential to throw an exception
 
+          CircleAvatar(
+            backgroundColor: Colors.white,
+            radius: 40,
+            child: incomingModel.imageData,
+          ),
+          Text(
+            incomingModel.text,
+            style: const TextStyle(fontSize: 15),
+          ),
+        ]),
+        const SizedBox(
+          width: 13,
+        ),
+      ],
+    );
 
+Widget triangleImage({
+  required TriangleImage TriangleImageModel,
+}) =>
+    Container(
+      color: Colors.white,
+      child: TriangleImageModel.imageData,
+    );
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-Widget circleLogoData (
-{
- required String logoText,
-   required Image logoImage,
-
-}
-
-)=>
-
- Row(
-   children: [
-
-
-
-     Column(
-
-     children:[
-
-     //code that has potential to throw an exception
-
-     CircleAvatar(
-       backgroundColor: Colors.white,
-       radius: 40,
-     child:
-     logoImage,
-     ),
-       Text(logoText,style: TextStyle(fontSize: 15),),
-       ]
-     ),
-     const SizedBox(width: 13,),
-
-   ],
- );
-
-
-
-
-Widget imageScroll ({
- // required advName,
+Widget imageScroll({
+  // required advName,
 //  required advDiscount,
- Function()? onTapGesture,
+  Function()? onTapGesture,
   required IconData advImage,
   required Color advColor,
-  double advWidth=400,
-  double advHeight= 250,
+  double advWidth = 400,
+  double advHeight = 250,
   bool advmargin = false,
-  double advMarginDouble=2,
-}
-)
-{
+  double advMarginDouble = 2,
+}) {
   return GestureDetector(
     onTap: onTapGesture,
-
-
     child: Container(
-
-      decoration:BoxDecoration(
+      decoration: BoxDecoration(
         color: advColor,
-        borderRadius: advmargin? BorderRadius.circular(10):null,
-
-
-
-      ) ,
-
-      margin:advmargin? EdgeInsets.all(advMarginDouble) :null  ,
-
-
+        borderRadius: advmargin ? BorderRadius.circular(10) : null,
+      ),
+      margin: advmargin ? EdgeInsets.all(advMarginDouble) : null,
       width: advWidth,
       height: advHeight,
-      child:
-        Icon(advImage),
-
-
-
-
+      child: Icon(advImage),
     ),
   );
-
 }
 
-Widget textAmazon (
-{
-  required String textString ,
-  double textSize= 16,
-  FontWeight fontWeight=FontWeight.bold,
-  Color textColor =Colors.black,
-
-}
-    )
-
-{
+Widget textAmazon({
+  required String textString,
+  double textSize = 16,
+  FontWeight fontWeight = FontWeight.bold,
+  Color textColor = Colors.black,
+}) {
   return Container(
-    margin: EdgeInsets.only(left: 20),
-
+    margin: const EdgeInsets.only(left: 20),
     child: Text(
       textString,
-      style: TextStyle(color:textColor,fontWeight: fontWeight,fontSize: textSize, ),
+      style: TextStyle(
+        color: textColor,
+        fontWeight: fontWeight,
+        fontSize: textSize,
+      ),
       maxLines: 2,
       textAlign: TextAlign.start,
       overflow: TextOverflow.ellipsis,
-
-
-
     ),
-
   );
-
 }
-
-
-
-
-
-
-

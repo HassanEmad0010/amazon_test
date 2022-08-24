@@ -1,13 +1,9 @@
+import 'package:flutter/material.dart';
+//class model of circular image
 
-import 'package:flutter/cupertino.dart';
+class CircularImage {
+  Image imageData;
+  String text;
 
-class CircularImage
-{
- Image imageData;
- String text;
-
-  CircularImage({required this.imageData,required this.text});
-
-
-
+  CircularImage({required this.imageData, required this.text});
 }
