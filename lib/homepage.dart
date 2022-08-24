@@ -5,6 +5,7 @@ import 'package:amazon_test/shared/componants/componants.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
+import 'models/Big_Image.dart';
 import 'modules/SecondDiscount.dart';
 
 class HomePage extends StatefulWidget {
@@ -41,7 +42,17 @@ class _HomePageState extends State<HomePage> {
     TriangleImage(imageData: Image.asset("assets/images/2.PNG")),
     TriangleImage(imageData: Image.asset("assets/images/1.PNG")),
   ];
+List <BigImage> bigImageList=[
 
+  BigImage(imageData: Image.asset("assets/images/11.PNG")),
+  BigImage(imageData: Image.asset("assets/images/10.PNG")),
+  BigImage(imageData: Image.asset("assets/images/12.PNG")),
+  BigImage(imageData: Image.asset("assets/images/13.PNG")),
+  BigImage(imageData: Image.asset("assets/images/14.PNG")),
+
+
+
+];
   @override
   Widget build(BuildContext contextt) {
     return Scaffold(
@@ -165,38 +176,10 @@ class _HomePageState extends State<HomePage> {
 
                 CarouselSlider(
                   items: [
-                    imageScroll(
-                        advImage: Icons.star,
-                        advColor: Colors.cyan,
-                        onTapGesture: () {
-                          print("first discount");
+                    imageScroll(bigImageModel: bigImageList[currentindex]),
 
-                          Navigator.push(
-                            contextt,
-                            MaterialPageRoute(builder: (BuildContext context) {
-                              return FirstDiscount();
-                            }),
-                          );
-                        }),
-                    imageScroll(
-                        advImage: Icons.circle,
-                        advColor: Colors.tealAccent,
-                        onTapGesture: () {
-                          Navigator.push(
-                            contextt,
-                            MaterialPageRoute(builder: (contextt) {
-                              return SecondDiscount();
-                            }),
-                          );
-                        }),
-                    imageScroll(advImage: Icons.circle, advColor: Colors.teal),
-                    imageScroll(
-                      advImage: Icons.shop,
-                      advColor: Colors.yellow,
-                    ),
-                    imageScroll(
-                        advImage: Icons.print,
-                        advColor: Colors.deepPurpleAccent),
+
+
                   ],
                   options: CarouselOptions(
                     // autoPlay: true,

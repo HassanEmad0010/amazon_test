@@ -1,3 +1,4 @@
+import 'package:amazon_test/models/Big_Image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:amazon_test/models/Circualer_Image.dart';
@@ -20,6 +21,8 @@ Widget textFormField({
       width: double.infinity,
       height: 80,
       child: TextFormField(
+        initialValue: "Search Amazon.eg",
+
         decoration: InputDecoration(
           border: const OutlineInputBorder(),
           prefix: iconPrefix,
@@ -74,9 +77,8 @@ Widget triangleImage({
 Widget imageScroll({
   // required advName,
 //  required advDiscount,
+  required BigImage bigImageModel,
   Function()? onTapGesture,
-  required IconData advImage,
-  required Color advColor,
   double advWidth = 400,
   double advHeight = 250,
   bool advmargin = false,
@@ -86,13 +88,13 @@ Widget imageScroll({
     onTap: onTapGesture,
     child: Container(
       decoration: BoxDecoration(
-        color: advColor,
+        //color: advColor,
         borderRadius: advmargin ? BorderRadius.circular(10) : null,
       ),
       margin: advmargin ? EdgeInsets.all(advMarginDouble) : null,
       width: advWidth,
       height: advHeight,
-      child: Icon(advImage),
+      child: bigImageModel.imageData,
     ),
   );
 }
